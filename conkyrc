@@ -53,9 +53,9 @@ color5 DCDCDC
 color6 FFFFFF
 color7 FFFFFF
 color8 FFFFFF
-
+ 
 TEXT
-${execi 300 curl -s "http://weather.yahooapis.com/forecastrss?w=493776&u=c" -o ~/.cache/weather.xml}
+${execi 300 curl -s "http://weather.yahooapis.com/forecastrss?w=782538&u=c" -o ~/.cache/weather.xml}
 \
 # Weather
 \
@@ -78,7 +78,7 @@ ${color2}${voffset -13}${alignc -77}${execi 300 grep "yweather:forecast" ~/.cach
 \
 ${voffset 20}
 ${goto 40}${cpugraph 26,190 FFFFFF FFFFFF -l}
-${goto 40}Cpu:${alignr 39}${cpu}%
+${goto 40}Cpu:${alignc}${platform coretemp.0 temp 1}°C${alignr 39}${cpu}% 
 
 ${goto 40}${memgraph 26,190 FFFFFF FFFFFF -l}
 ${goto 40}Mem:${alignr 39}${memperc}%
